@@ -2,22 +2,14 @@ on:
   push:
     # Sequence of patterns matched against refs/heads
     branches:    
-      # Push events on main branch
     - main
   release:
     types: [published]
   # push:
-  # 	branches-ignore: [master]
-  # pull_request:
   # 	branches-ignore: []
 jobs:
-  # strategy: 
-  #   max-parallel: 1
   build:
-    # - uses: actions/checkout@master
-    
     runs-on: ubuntu-latest
-    # runs-on: windows-latest
     # if: "! contains(toJSON(github.event.commits.*.msg), '[skip-ci]')"
     steps:  
     - name: use setup node
@@ -32,9 +24,7 @@ jobs:
       run: yarn install
     - name: build script
       run: yarn build
-  # # publish_build:
-  #   runs-on: ubuntu-latest
-  #   steps:
+
     - name: Commit and push to main
       run: |
         git config user.email "pegak15@seznam.cz"
@@ -42,10 +32,3 @@ jobs:
         git add .
         git commit -m "[Auto] Build uncompiled TS files." -a
         git push
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: main
-        # branch: ${{ github.ref }}
-    # needs: build
