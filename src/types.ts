@@ -1,6 +1,5 @@
 interface Window {
   TWMap: { villages: { [key: string]: any } };
-  jQuery: any;
   UI: any;
 }
 
