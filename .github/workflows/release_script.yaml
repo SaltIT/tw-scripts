@@ -32,9 +32,6 @@ jobs:
       run: yarn install
     - name: build script
       run: yarn build
-  publish_build:
-    runs-on: ubuntu-latest
-    steps:
     - name: Commit files
       run: |
         git config user.email "action@github.com"
