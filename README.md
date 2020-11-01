@@ -1,0 +1,4 @@
+- workflows
+- build, succ- tag=> intert to dist folder
+- update readme on success
+- notify in PR (optional close)

@@ -1,0 +1,25 @@
+{
+  "name": "tw-scripts",
+  "version": "1.0.0",
+  "description": "- workflows - build, succ- tag=> intert to dist folder - update readme on success - notify in PR (optional close)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaltIT/tw-scripts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaltIT/tw-scripts/issues"
+  },
+  "homepage": "https://github.com/SaltIT/tw-scripts#readme",
+  "dependencies": {
+    "typescript": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/jquery": "^1.1.0"
+  }
+}

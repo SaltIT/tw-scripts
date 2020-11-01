@@ -1,0 +1,28 @@
+name: script build and release
+on:
+	push:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      # Push events on main branch
+      - main
+	release:
+		types: [published]
+	# push:
+	# 	branches-ignore: [master]
+	# pull_request:
+	# 	branches-ignore: []
+jobs:
+	strategy: 
+		max-parallel: 1
+	build:
+		- uses: actions/checkout@master
+    runs-on: ubuntu-latest
+		# runs-on: windows-latest
+		# if: "! contains(toJSON(github.event.commits.*.msg), '[skip-ci]')"
+		steps:  
+		- id: build_script
+		- run: tsc --build tsconfig.json 
+		- id: 
+	release:
+		needs: build
+
