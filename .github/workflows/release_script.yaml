@@ -21,8 +21,8 @@ jobs:
 		# runs-on: windows-latest
 		# if: "! contains(toJSON(github.event.commits.*.msg), '[skip-ci]')"
 		steps:  
-		- name: install node v12
-      uses: actions/setup-node@v1
+		- name: install node
+      uses: actions/setup-node@v2
       with:
         node-version: 12
     - name: yarn install
