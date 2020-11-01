@@ -4,7 +4,8 @@
   "description": "- workflows - build, succ- tag=> intert to dist folder - update readme on success - notify in PR (optional close)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build"
   },
   "repository": {
     "type": "git",
