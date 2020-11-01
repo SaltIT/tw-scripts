@@ -20,8 +20,8 @@ jobs:
     # runs-on: windows-latest
     # if: "! contains(toJSON(github.event.commits.*.msg), '[skip-ci]')"
     steps:  
-    - uses: actions/setup-node@v2
-    - name: install node
+    - name: use setup node
+      uses: actions/setup-node@v2
       with:
         node-version: 12
     - name: install yarn
@@ -29,5 +29,5 @@ jobs:
     - name: yarn install
       run: yarn install
     - name: build script
-    - run: yarn build
+      run: yarn build
 
