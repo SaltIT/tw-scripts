@@ -34,9 +34,9 @@ jobs:
       run: yarn build
     - name: Commit files
       run: |
-        git config user.email "action@github.com"
-        git config user.name "GitHub Action"
-        git commit -m "Add changes" -a
+        git config user.email "pegak15@seznam.cz"
+        git config user.name "Pegak"
+        git commit -m "[Auto] Build uncompiled TS files." -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
