@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: 12
     - name: checkout project
-      uses: ./
+      uses: actions/checkout@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: install yarn
