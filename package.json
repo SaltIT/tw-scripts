@@ -1,7 +1,7 @@
 {
   "name": "tw-scripts",
   "version": "1.0.0",
-  "description": "- workflows - build, succ- tag=> intert to dist folder - update readme on success - notify in PR (optional close)",
+  "description": "Collection of scripts for Tribal Wars browser game.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
