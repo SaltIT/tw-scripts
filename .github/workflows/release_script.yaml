@@ -27,6 +27,7 @@ jobs:
     - name: checkout project
       uses: actions/checkout@v2
       with:
+        path: main
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: install yarn
       run: npm i -g yarn
