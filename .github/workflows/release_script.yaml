@@ -26,11 +26,9 @@ jobs:
       with:
         node-version: 12
     - name: yarn install
-      run: yarn install
-		- uses: iCrawl/action-tsc@v1
-		- id: build_script
-		- run: tsc --build tsconfig.json 
-		# - id: 
+			run: yarn install
+		- name: build script
+		- run: yarn build
 	release:
 		needs: build
 
