@@ -24,6 +24,10 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
+    - name: checkout project
+      uses: ./
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
     - name: install yarn
       run: npm i -g yarn
     - name: yarn install
