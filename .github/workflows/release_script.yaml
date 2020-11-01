@@ -15,14 +15,22 @@ jobs:
 	strategy: 
 		max-parallel: 1
 	build:
-		- uses: actions/checkout@master
+		# - uses: actions/checkout@master
+		
     runs-on: ubuntu-latest
 		# runs-on: windows-latest
 		# if: "! contains(toJSON(github.event.commits.*.msg), '[skip-ci]')"
 		steps:  
+		- name: install node v12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: yarn install
+      run: yarn install
+		- uses: iCrawl/action-tsc@v1
 		- id: build_script
 		- run: tsc --build tsconfig.json 
-		- id: 
+		# - id: 
 	release:
 		needs: build
 
