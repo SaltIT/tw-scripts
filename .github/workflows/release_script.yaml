@@ -41,6 +41,7 @@ jobs:
         git config user.name "Pegak"
         git add .
         git commit -m "[Auto] Build uncompiled TS files." -a
+        git push
     # - name: Push changes
     #   uses: ad-m/github-push-action@master
     #   with:
