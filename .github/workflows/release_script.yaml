@@ -32,16 +32,21 @@ jobs:
       run: yarn install
     - name: build script
       run: yarn build
-    - name: Commit files
+  # # publish_build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+    - name: Commit and push to main
       run: |
         git config user.email "pegak15@seznam.cz"
         git config user.name "Pegak"
+        git add .
         git commit -m "[Auto] Build uncompiled TS files." -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main
+        git push
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: main
         # branch: ${{ github.ref }}
-    needs: build
+    # needs: build
 
