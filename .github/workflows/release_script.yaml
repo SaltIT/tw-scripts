@@ -39,6 +39,7 @@ jobs:
       run: |
         git config user.email "pegak15@seznam.cz"
         git config user.name "Pegak"
+        git add .
         git commit -m "[Auto] Build uncompiled TS files." -a
     # - name: Push changes
     #   uses: ad-m/github-push-action@master
