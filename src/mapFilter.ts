@@ -119,7 +119,7 @@ function getParameterByName(name: string, url = window.location.href) {
   return new URL(url).searchParams.get(name);
 }
 
-// Initalize Script
+// Initialize Script
 (function () {
   const gameScreen = getParameterByName("screen");
 
