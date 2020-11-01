@@ -21,7 +21,7 @@ jobs:
     # if: "! contains(toJSON(github.event.commits.*.msg), '[skip-ci]')"
     steps:  
     - name: use setup node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v2-beta
       with:
         node-version: 12
     - name: install yarn
